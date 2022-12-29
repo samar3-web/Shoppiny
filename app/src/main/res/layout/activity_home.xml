@@ -5,6 +5,64 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".HomeActivity">
+    <!--Toolbar-->
+    <RelativeLayout
+        android:id="@+id/toolbarRl"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        >
+        <TextView
+            android:id="@+id/nameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Name"
+            android:textStyle="bold"
+            android:textSize="20sp"
+
+            />
+        <ImageButton
+            android:id="@+id/logoutBtn"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/ic_baseline_login_24"
+            android:layout_alignParentEnd="true"
+            android:background="@null"
+            />
+    </RelativeLayout>
+    <!--Annonces -->
+    <RelativeLayout
+        android:id="@+id/productsRl"
+        android:layout_below="@+id/toolbarRl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
+        >
+
+
+        <ImageButton
+            android:id="@+id/filterProductBtn"
+            android:layout_height="45dp"
+            android:layout_width="45dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:background="@null"
+            android:scaleType="fitXY"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/productsRv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="5dp"
+            android:layout_marginBottom="5dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/row_product" />
+
+
+    </RelativeLayout>
+   //
 
     <com.google.android.material.bottomappbar.BottomAppBar
         android:layout_width="match_parent"
