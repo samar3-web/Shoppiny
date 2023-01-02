@@ -40,9 +40,9 @@
         app:srcCompat="@drawable/ic_baseline_bookmark_border_24" />
 
     <ImageView
-        android:id="@+id/imageView8"
-        android:layout_width="285dp"
-        android:layout_height="305dp"
+        android:id="@+id/productIconIv"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -61,7 +61,7 @@
         app:layout_constraintEnd_toStartOf="@+id/textView5"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView8" />
+        app:layout_constraintTop_toBottomOf="@+id/productIconIv" />
 
     <TextView
         android:id="@+id/textView5"
@@ -128,7 +128,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
     <TextView
-        android:id="@+id/textView10"
+        android:id="@+id/categoryTv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -141,7 +141,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
     <TextView
-        android:id="@+id/name"
+        android:id="@+id/titleTv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
@@ -149,11 +149,11 @@
         android:text="Iphone 14 pro max"
         android:textColor="#091020"
         android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="@+id/textView10"
-        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+        app:layout_constraintStart_toStartOf="@+id/categoryTv"
+        app:layout_constraintTop_toBottomOf="@+id/categoryTv" />
 
     <TextView
-        android:id="@+id/imageView9"
+        android:id="@+id/priceTv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="$5.78"
@@ -162,11 +162,11 @@
         android:textColor="#272670"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView10"
+        app:layout_constraintTop_toTopOf="@+id/titleTv"
         />
 
     <TextView
-        android:id="@+id/textView12"
+        android:id="@+id/descriptionTv"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -176,39 +176,48 @@
         android:text="The iPhone 14 Pro Max display has rounded corners that follow a beautiful curved design, and these corners are within a standard rectangle."
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/name" />
+        app:layout_constraintTop_toBottomOf="@+id/titleTv" />
 
-    <ImageView
-        android:id="@+id/imageView10"
-        android:layout_width="40dp"
+    <TextView
+        android:id="@+id/phoneNumberTV"
+        android:layout_width="150dp"
         android:layout_height="40dp"
-        android:layout_marginStart="21dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="12dp"
+        android:drawable="@drawable/ic_baseline_phone_24"
+        android:ems="10"
+        android:textColor="#272670"
+        android:textSize="18sp"
+        android:paddingStart="6dp"
+        android:fontFamily="@font/semibold"
+        android:text="12345678"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView12"
-         />
+        app:layout_constraintTop_toBottomOf="@+id/descriptionTv" />
 
     <TextView
         android:id="@+id/textView13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
+        android:layout_marginStart="32dp"
         android:fontFamily="@font/semibold"
         android:text=""
         android:textColor="#272670"
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView10"
-        app:layout_constraintStart_toEndOf="@+id/imageView10"
-        app:layout_constraintTop_toTopOf="@+id/imageView10" />
+        app:layout_constraintBottom_toBottomOf="@+id/phoneNumberTV"
+        app:layout_constraintStart_toEndOf="@+id/phoneNumberTV"
+        app:layout_constraintTop_toTopOf="@+id/phoneNumberTV"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
         android:id="@+id/imageView11"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:layout_marginStart="4dp"
+        android:layout_marginStart="44dp"
+        android:background="@drawable/ic_baseline_phone_24"
         app:layout_constraintBottom_toBottomOf="@+id/textView13"
         app:layout_constraintStart_toEndOf="@+id/textView13"
         app:layout_constraintTop_toTopOf="@+id/textView13"
+        app:layout_constraintVertical_bias="1.0"
         />
 
     <TextView

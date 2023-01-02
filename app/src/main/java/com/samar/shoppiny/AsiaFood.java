@@ -5,11 +5,42 @@ public class AsiaFood {
     String name;
     String price;
     Integer imageUrl;
+    String  productDescription;
+    String productCategory;
+    String productNumber;
 
-    public AsiaFood(String name, String price, Integer imageUrl, String rating, String restorantname) {
+    public String getProductNumber() {
+        return productNumber;
+    }
+
+    public void setProductNumber(String productNumber) {
+        this.productNumber = productNumber;
+    }
+
+
+    public String getProductDescription() {
+        return productDescription;
+    }
+
+    public void setProductDescription(String productDescription) {
+        this.productDescription = productDescription;
+    }
+
+    public String getProductCategory() {
+        return productCategory;
+    }
+
+    public void setProductCategory(String productCategory) {
+        this.productCategory = productCategory;
+    }
+
+    public AsiaFood(String name, String price, Integer imageUrl, String productDescription, String productCategory, String productNumber, String rating, String restorantname) {
         this.name = name;
         this.price = price;
         this.imageUrl = imageUrl;
+        this.productDescription = productDescription;
+        this.productCategory = productCategory;
+        this.productNumber = productNumber;
         this.rating = rating;
         this.restorantname = restorantname;
     }

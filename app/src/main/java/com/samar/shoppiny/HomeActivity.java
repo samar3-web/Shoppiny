@@ -66,12 +66,12 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
         List<AsiaFood> asiaFoodList = new ArrayList<>();
-        asiaFoodList.add(new AsiaFood("Iphone 14 pro max", "7600 TND", R.drawable.iphone, "4.5", "istore"));
-        asiaFoodList.add(new AsiaFood(" Montre ", "120 TND", R.drawable.montre, "4.2", "City Watch"));
-        asiaFoodList.add(new AsiaFood(" TV", "1500 TND", R.drawable.tv, "4.5", "LG"));
-        asiaFoodList.add(new AsiaFood(" Climatiseur", "6500 TND", R.drawable.clim, "4.2", "LG"));
-        asiaFoodList.add(new AsiaFood("Fiat punto", "50 000 TND", R.drawable.fiat, "4.5", "Fiat"));
-        asiaFoodList.add(new AsiaFood(" Vespa", "4900 TND", R.drawable.vespa, "4.2", "Vespa"));
+        asiaFoodList.add(new AsiaFood("Iphone 14", "7600 TND", R.drawable.iphone, "The iPhone 14 Pro Max display has rounded corners that follow a beautiful curved design, and these corners are within a standard rectangle.", "Loisir ","55432325","4.5","istore"));
+        asiaFoodList.add(new AsiaFood(" Montre ", "120 TND", R.drawable.montre, "Montre Raymond Daniel", "Loisir","55832098","4.2","City Watch"));
+        asiaFoodList.add(new AsiaFood(" TV", "1500 TND", R.drawable.tv, "", "Maison et jardin","12345678","3.2","Tunisia MAll"));
+        asiaFoodList.add(new AsiaFood(" Climatiseur", "6500 TND", R.drawable.clim, "Climatiseur chaud et froid", "Maison et jardin","21236548","4.2","LG"));
+        asiaFoodList.add(new AsiaFood("Fiat punto", "50 000 TND", R.drawable.fiat, "voiture fiat punto presque neuf", "Véhicules","45632548","4.1","Fiat"));
+        asiaFoodList.add(new AsiaFood(" Vespa", "4900 TND", R.drawable.vespa, "Vespa un peu utilisé", "Véhicules","20123456","4.1","pas de livraison"));
 
         setAsiaRecycler(asiaFoodList);
 
