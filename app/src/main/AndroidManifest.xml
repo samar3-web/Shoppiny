@@ -18,6 +18,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Shoppiny.NoActionBar">
         <activity
+            android:name=".Mes_Annonce_Details"
+            android:exported="true" />
+        <activity
+            android:name=".DetailsProduct"
+            android:exported="true" />
+        <activity
             android:name=".addAnnonceActivity"
             android:exported="true" />
         <activity
@@ -25,12 +31,10 @@
             android:exported="true" />
         <activity
             android:name=".RegisterActivity"
-            android:exported="true"
-            />
+            android:exported="true" />
         <activity
             android:name=".LoginActivity"
-            android:exported="true"
-            />
+            android:exported="true" />
         <activity
             android:name=".SplashActivity"
             android:exported="true">

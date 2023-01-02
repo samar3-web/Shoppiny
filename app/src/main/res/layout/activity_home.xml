@@ -1,97 +1,177 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".HomeActivity">
-    <!--Toolbar-->
-    <RelativeLayout
-        android:id="@+id/toolbarRl"
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        >
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="18dp"
+        android:fontFamily="@font/semibold"
+        android:text="Shoppiny"
+        android:textColor="@color/colorAccent"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profileIv"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="15dp"
+        android:src="@drawable/ic_baseline_person_24"
+        app:civ_border_color="@color/colorAccent"
+        app:civ_border_width="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/logoutBtn"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintBottom_toBottomOf="@+id/profileIv"
+        app:layout_constraintEnd_toStartOf="@+id/profileIv"
+        app:layout_constraintTop_toTopOf="@+id/profileIv"
+        app:srcCompat="@drawable/ic_baseline_login_24" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/search_bg"
+        android:drawableLeft="@drawable/ic_baseline_search_24"
+        android:drawablePadding="8dp"
+        android:ems="10"
+        android:hint="@android:string/search_go"
+        android:inputType="textPersonName"
+        android:paddingStart="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/imageView3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/editText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editText"
+        app:srcCompat="@drawable/ic_baseline_filter_list_24" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/layout_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText">
+
+
         <TextView
-            android:id="@+id/nameTv"
+            android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:text="Name"
-            android:textStyle="bold"
-            android:textSize="20sp"
-
-            />
-        <ImageButton
-            android:id="@+id/logoutBtn"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:src="@drawable/ic_baseline_login_24"
-            android:layout_alignParentEnd="true"
-            android:background="@null"
-            />
-    </RelativeLayout>
-    <!--Annonces -->
-    <RelativeLayout
-        android:id="@+id/productsRl"
-        android:layout_below="@+id/toolbarRl"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="50dp"
-        >
-
-
-        <ImageButton
-            android:id="@+id/filterProductBtn"
-            android:layout_height="45dp"
-            android:layout_width="45dp"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="5dp"
-            android:layout_marginEnd="5dp"
-            android:background="@null"
-            android:scaleType="fitXY"
-            />
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/semibold"
+            android:text="Mes Annonces"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/productsRv"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginStart="5dp"
-            android:layout_marginBottom="5dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            tools:listitem="@layout/row_product" />
-
-
-    </RelativeLayout>
-   //
-
-    <com.google.android.material.bottomappbar.BottomAppBar
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:id="@+id/bottomAppBar"
-        app:fabCradleMargin="10dp"
-        app:fabCradleRoundedCornerRadius="10dp"
-        app:fabCradleVerticalOffset="10dp"
-        >
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/bottomNavigationView"
-            android:layout_marginRight="16dp"
-            app:menu="@menu/bottom_menu_nav"
-            android:background="@drawable/transparent_background"
-
+            tools:listitem="@layout/row_product"
             />
-    </com.google.android.material.bottomappbar.BottomAppBar>
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_baseline_add_24"
-        app:backgroundTint="@color/colorAccent"
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/semibold"
+            android:text="Autres Annonces "
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/productsRv" />
 
-        app:layout_anchor="@id/bottomAppBar" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/asia_recycler"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+            <com.google.android.material.bottomappbar.BottomAppBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:id="@+id/bottomAppBar"
+                app:fabCradleMargin="10dp"
+                app:fabCradleRoundedCornerRadius="10dp"
+                app:fabCradleVerticalOffset="10dp"
+                >
+                <com.google.android.material.bottomnavigation.BottomNavigationView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/bottomNavigationView"
+                    android:layout_marginRight="16dp"
+                    app:menu="@menu/bottom_menu_nav"
+                    android:background="@drawable/transparent_background"
+
+                    />
+            </com.google.android.material.bottomappbar.BottomAppBar>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_add_24"
+                app:backgroundTint="@color/login_bk_color"
+
+                app:layout_anchor="@id/bottomAppBar" />
+
+
+
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
